@@ -8,7 +8,15 @@ import { StyleSheet, TextInput  } from 'react-native'
 // deberian venir desde el lugar donde se instancia el componente
 const Input = (props) => {
     return (
-            <TextInput blurOnSubmit autoCapitalize='none' autoCorrect={false} keyboardType='number-pad' maxLength={2} style={[styles.input, props.style]} />
+            <TextInput 
+                blurOnSubmit 
+                autoCapitalize='none' 
+                autoCorrect={false} 
+                keyboardType='number-pad' 
+                maxLength={2} 
+                onChangeText={props.onChangeText}
+                value={props.value}
+                style={[styles.input, props.style]} />
     )
 }
 
